@@ -1,0 +1,8 @@
+Tired of playing computer card games with one fixed set of rules?  Astonished by the lack of non-Casino card games for computers?  Well, 'Card Game Creator' is for you!  With its innovative drag-and-drop interface, you can create a card game with any combination of rules that you desire!  Add that twist that makes Hearts so fun.  Or create the game that has been in your family for generations, but no one knows about.  It is all up to you!
+
+How to Play:
+
+1) From the main menu, click "Create Game."
+2) The next screen is a drag and drop interface, with options on the left and a rules area on the right.  Drag the options you would like to include in your game into the rules area.  Once dropped, a popup will appear asking for further details.  To give you an example, there are two preset games, 29 and Hearts.
+3) Set Player Names by clicking on the button.
+4) Click Start Game, and enjoy!

@@ -1,0 +1,5 @@
+pointsText: spades Q 13, hearts 1
+playerWhoStartsText: clubs 2
+suitsLegalityDictText: hearts
+winnerText: leastPoints
+passCardsText: 3 | left, right, across, no

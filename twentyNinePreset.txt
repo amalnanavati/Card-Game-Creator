@@ -1,0 +1,10 @@
+omitCardsText: 2-6
+winnerText: points>=Bid
+valueOrderText: 7,8,Q,K,10,A,9,J
+bidText: 15 | 29 | faceOff | Y | before
+trumpText: winner
+pointsText: J 3,9 2,A 1,10 1
+playerWhoStartsText: winner
+partnersText: across
+isTrumpHiddenText: True
+dealOrderText: 4 | 4
