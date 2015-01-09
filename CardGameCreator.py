@@ -1722,7 +1722,7 @@ class CardGame(object):
         while (self.players[0].numberOfCards() != 
             sum(self.rules.dealOrder[:self.rules.timesCardHaveBeenDealt+1]) or
             not self.playersHaveEqualCards()):
-        playerI = len(self.deck) % self.rules.numberOfPlayers
+            playerI = len(self.deck) % self.rules.numberOfPlayers
             self.players[playerI].getsDealtCard(self.deck.pop(0))
         self.rules.timesCardHaveBeenDealt += 1
         for player in self.players: print player
@@ -1803,8 +1803,7 @@ class CardGame(object):
                 if card.aboutToPass:
                     card.aboutToPass = not card.aboutToPass
                     self.players[playerI].passCardIndices.remove(cardI)
-                elif len(self.players[playerI].passCardIndices) < 
-                     self.rules.passCards[0]:
+                elif len(self.players[playerI].passCardIndices) < self.rules.passCards[0]:
                     card.aboutToPass = not card.aboutToPass
                     self.players[playerI].passCardIndices.append(cardI)
             elif self.rules.gamePhase == 1:
@@ -1885,7 +1884,7 @@ class CardGame(object):
             if self.rules.bid[0]:
                 self.playerWhoStartsBid = self.playerWhoseTurnItIs
                 self.playerWhoIsFacingOff = (self.playerWhoseTurnItIs+1)%self.rules.numberOfPlayers
-                self.previousBid = self.rules.bid[1]-1
+                self.previousBid = self.rules.bid[1]
             name = self.players[self.playerWhoseTurnItIs].name
             self.displayPassComputerMessage(name)
         else:
@@ -2072,7 +2071,7 @@ class CardGame(object):
             self.callbackQueue.pop(completedCallbackIndices[index]-index)
         if self.timerDelay:self.canvas.after(self.timerDelay, self.onTimerFired) 
 
-        def moveTrick(self,playerI,steps):
+    def moveTrick(self,playerI,steps):
         """Animates the motion of a trick to the palyer who won it"""
         minx0 = maxx0 = self.trick[0].bbox[0]
         miny0 = maxy0 = self.trick[0].bbox[1]
@@ -2177,7 +2176,7 @@ class CardGame(object):
         return message
 
     def determineWinners(self):
-       """Determines the winners of the game"""
+        """Determines the winners of the game"""
         winners = []
         if self.rules.winner == "leastPoints":
             minPoints = sys.maxint
